@@ -1,0 +1,62 @@
+顺序读写数据文件：
+｛
+	fgetc():调用形式为fgetc(fp),从fp指向的文件读入一个字符，与scanf功能大概一致。
+		读成功，带回所读字符，失败则返回文件结束标志EOF（即-1）
+	fputc():调用形式为fputc(ch,fp),把字符ch写到文件指针变量fp所指向的文件中。与printf功能大概一致，但printf是将字符显示到黑屏幕上，而fputc是将文件显示在文件中。
+		输出成功，返回值就是输出字符，输出失败，返回EOF（即-1）
+	fgets():调用形式为fgets(str,n,fp)，从fp指向的文件读入一个长度为n-1的字符串，存放到字符数组str中。
+		读成功，返回地址str，失败则返回NULL。
+	fputs():调用形式为fputs(str,fp),把str所指向的字符串写到文件指针变量fp所指向的文件中。
+		输出成功返回0，不成功返回非0值。
+	fptintf():调用形式为fprintf(文件指针，格式字符串，输出表列) 
+			example：fprintf（fp,"%d,%6.2f",i,f）;
+			作用是将int型变量i和float型变量f的值按%d和%6.2f的格式输入到fp所指向的文件中。	
+	fscanf():调用形式为fscanf(文件指针，格式字符串，输入表列)
+			example：fprintf(fp,"%d,%f",i,f);
+			作用是从文件磁盘中读取一个整数赋值给整型变量i，读取一个实数赋值给实型变量f。
+	fread():调用形式为fread(buffer,size,count,fp);这个函数从fp所指向文件中读入count个size个字节的数据，存放到数组buffer中。
+			从文件中读取出一个数据块。
+	fwrite():调用形式为fwrite(buffer,size,count,fp);这个函数将数组buffer中的count个size个字节的数据写入fp所指向的文件中。
+			向文件写入一个数据块。
+｝
+
+
+
+css盒子模型div：
+｛
+	宽度：width:200px
+	高度：height:200px
+	背景颜色：bacdground:red
+	边框：border:solid 20px blue
+	内边距：padding:20px
+	外边距：margin:20px
+
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+		<head>
+			<title>盒子模型练习</title>
+			<meta http-equiv="Content=Type" content="text/html; charset=utf=8 /">
+			<meta name="description" content="" />
+			<meta name="keywords" content="" />
+
+			<style type="text/css">
+				#boxer{
+				width:200px;
+				height:200px;
+				background:red;
+				border:solid 20px blue;
+				padding:20px;
+				margin:50px;
+				}
+				#main{
+				width:200px;
+				height:200px;
+				background:red;
+				}
+			</style>
+		</head>
+		<body>
+			<div id="boxer">这是个盒子</div>
+			<div id="main">这不是个盒子</div>
+		</body>
+	</html>

@@ -1,0 +1,76 @@
+1:内联元素的特点
+内联元素只在行内发挥作用, 
+而块状元素显示效果为一个矩形区域
+
+内联元素不能设置width,height,
+也不能设置竖起方向的margin,padding
+
+
+2:内联元素与块状元素如何转化?
+答:display:block/inline/none
+
+3:举出你在项目中用到的内联元素转块状的例子?
+图片空白的解决,
+a标签设置宽高时.
+
+4:a标签的4个伪类选择器及顺序?
+a:link, a:visited ,a:hover,a:active
+lvha
+
+5:字体控制的5个顺序
+font-style,font-weight,font-size/line-height,font-family
+
+
+6:背景的属性
+color, 
+url,
+repeat-x/-y,no-repeat
+attchment:fixed/scorll
+postion:可以用在多个元素共用一张背景.(在大网站中,可以减少请求,减轻服务器压力)
+
+文本控制
+段落缩进:text-indent 
+ 作用:控制一段首行的缩进距离.
+ 例: css选择器{text-indent:20px;}
+
+水平对齐:text-align
+  作用:控制文字在水平方向上的对齐方式
+  例: css选择器{text-aligh:left;}  //可选值 left,right,center, 默认是left;
+
+文本装饰:text-decoration
+  作用:给文字加一些修饰线的效果.
+  例:css选择器{text-decoration:underline;} // none,underline,overline,line-through,blink 
+
+字母间距:letter-spacing
+  作用:控制单个字符之间的距离
+  例:css选择器{letter-spacing:20px;}
+词间距:word-spacing (对中文无效);
+   作用:控制单词与单词之间的距离
+   例: css选择器{word-spacing:20px;}
+
+大小写转换:text-transform
+  作用:按一定规则转换字母的大小写
+  例: css选择器{text-transform:uppercase;} // uppercase（小写变成大写）, lowercase（大写变成小写）,capitalize（开头字母大写）;
+  Capitalize: 是把首字母大写,其他字母不受影响.
+
+
+
+字体控制:
+Font-style : 显示风格
+作用:控制文字的是否斜体显示或正常显示.
+例: css选择器{font-style:italic;} //normal,oblique
+
+Font-weight: 字体粗细
+作用: 控制文字的粗细程度
+例:css选择器{font-weight:bold;} //normal/bold
+
+Font-size: 字体大小
+作用:控制字体的大小
+例:css选择器{font-size:30px;} //则每个字符以30像素的大小显示.
+
+Line-height: 行高
+作用:设置每行文字所占的高度,(特点:在一行内,文字总是相对于行居中显示,所以可以利用这个特性让文字相对于容器居中)
+例: css选择器{line-height:30px;}// 则每一行占据30个像素高.
+
+Font-family: 设置字体
+作用:设置显示文字所用的字体.

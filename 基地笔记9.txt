@@ -1,0 +1,87 @@
+语义化：
+1，告诉SE页面结构
+2，方便其他程序员更好清楚明白的明白你写的东西
+3，方便特殊设备（盲人浏览器等）了解你的结构
+
+
+reset.css 用于清楚标签默认属性，不滥用
+不要引用   ，自己清除默认属性
+
+飞版：最小宽度，两边留白   1212px
+
+空网页：href="javascript：viod(0)"
+
+BFC（块状格式化上下文）：
+内部的Box会在垂直方向，一个接一个地放置。
+Box垂直方向的距离由margin决定。属于同一个BFC的两个相邻Box的margin会发生重叠
+每个元素的margin box的左边， 与包含块border box的左边相接触(对于从左往右的格式化，否则相反)。即使存在浮动也是如此。
+BFC的区域不会与float box重叠。
+BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此。
+计算BFC的高度时，浮动元素也参与计算
+
+高度崩溃，
+
+
+
+盒模型：
+content box（默认），可以写如内容区域
+border box：宽高包括border，padding
+box-sizing：border box、
+
+
+position：top，left，bottom，right
+
+absolute 	
+	生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。
+	元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。
+fixed 	
+	生成绝对定位的元素，相对于浏览器窗口进行定位。
+	元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。
+relative 	
+	生成相对定位的元素，相对于其正常位置进行定位。
+	因此，"left:20" 会向元素的 LEFT 位置添加 20 像素。
+static 	默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）。
+inherit 规定应该从父元素继承 position 属性的值。
+
+
+伪类
+after：
+	<!DOCTYPE html>
+	<html>
+	<head>
+	<style>
+	p:after
+	{
+	content:"- 台词";
+	background-color:yellow;
+	color:red;
+	font-weight:bold;
+	}
+	</style>
+	</head>
+	<body>
+	<p>我是唐老鸭。</p>
+	<p>我住在 Duckburg。</p>
+	<p><b>注释：</b>对于在 IE8 中工作的 :after，必须声明 DOCTYPE。</p>
+	</body>
+	</html>
+
+	我是唐老鸭。- 台词（“- 台词”为黄底红字）
+	我住在 Duckburg。- 台词（“- 台词”为黄底红字）
+before：与after类似
+
+
+transition 属性是一个简写属性，用于设置四个过渡属性：
+    transition-property 规定设置过渡效果的 CSS 属性的名称。
+    transition-duration 规定完成过渡效果需要多少秒或毫秒。
+    transition-timing-function 规定速度效果的速度曲线。
+	linear 	规定以相同速度开始至结束的过渡效果（等于 cubic-bezier(0,0,1,1)）。
+	ease 	规定慢速开始，然后变快，然后慢速结束的过渡效果（cubic-bezier(0.25,0.1,0.25,1)）。
+	ease-in 	规定以慢速开始的过渡效果（等于 cubic-bezier(0.42,0,1,1)）。
+	ease-out 	规定以慢速结束的过渡效果（等于 cubic-bezier(0,0,0.58,1)）。
+	ease-in-out 	规定以慢速开始和结束的过渡效果（等于 cubic-bezier(0.42,0,0.58,1)）。
+	cubic-bezier(n,n,n,n) 	在 cubic-bezier 函数中定义自己的值。可能的值是 0 至 1 之间的数值。
+    transition-delay 定义过渡效果何时开始。
+
+
+

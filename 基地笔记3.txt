@@ -1,0 +1,22 @@
+网夜设计：
+关于div标签：	用于网页的页面布局，<div> 标签可以把网页分割为独立的、不同的部分。
+             	<div> 无论宽度如何,在浏览上的显示效果都是---独占一行，意味着它的内容会自动开始一个新行。
+	     	可以对同一个<div>元素应用class或id属性。
+      		example：
+		<body>
+			<div id="header">head</div>
+			<div id="main">main
+			</div>
+			<div id="footer">footer</div>
+		</body>
+css的id选择器：	id 选择器可以为标有特定 id 的 HTML 元素指定特定的样式。以“#”来定义
+	       	example：
+		<style type="text/css">
+			#header{
+				width:1024px;
+				height:100px;
+				background:red;
+			}
+		使用时声明用css样式：<style type="text/css">。
+		定义后，id为header的标签就会有width:1024px;height:100px;background:red;的性质。
+		注意：id 属性只能在每个 HTML 文档中出现一次。

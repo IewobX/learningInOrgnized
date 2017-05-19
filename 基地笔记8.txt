@@ -1,0 +1,44 @@
+Bug调试
+
+1:doctype没声明,带来的IE浏览器盒模型解析bug
+解决: 进行xhtml 正确声明,如strict声明
+
+2:浏览器的初始值不同带来的.
+解决:进行css初始化.
+
+3:自身代码不规范带来的bug,
+解决:面壁
+
+4:浏览器的bug带来的.
+
+4.1 IE6, 有双倍margin bug
+是指:浮动方向上的margin值会加倍.
+例如: 某元素 float:left; margin-left的值是10px, 那么页面上会解析为20px;
+同时 ,float:right, margin-right也会加倍
+解决方案: 设置漂浮元素的_display:inline;
+
+
+4.2: 3像素bug,
+解决:规范float的用法
+
+4.3: IE关于a标签的4个伪类的兼容bug
+答:对于IE, 如果a:link方式声明了标签的样式
+可能会引来 visited伪类的解析异常
+
+解决: 去掉a:link,以 a 来代替. 
+
+
+
+
+ img,object selexct,input,textarea
+这5种元素,和其他内联元素相比,
+即使是空标签,也已经有一定的显示效果
+或者是标签本身体现的内容,是一个外部资源, 例 img --> src,object->wmv/flash等
+
+对于这一类元素,w3c给出的名称是 replaced element ,置换元素
+
+置换元素,可以设宽和高,以及竖直/水平方向的margin,padding, 和块一样
+
+但是,他们又不换行,体现内联的特性
+
+并且,结束后,下方会有留白,也是体现内联的特性

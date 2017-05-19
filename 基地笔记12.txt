@@ -1,0 +1,40 @@
+面向对象 ： 类 对象
+	计算机对现实世界的理解与客观抽象
+
+	类：物以类聚，可以将相同的事物归结在一起，叫做类
+	一类人，一类电脑，一类花
+
+	用自然语言来描述 人 这个类
+	年龄，性别，身高，姓名
+
+//用java来描述人这个类
+class Person{
+//数据保存在变量里面
+	//类的属性
+	char gender；
+	int age；
+	String name；
+	int height；
+	｝
+
+class Conputer｛
+	float price；
+	char color；
+	String brand;
+	｝
+public class Demo4{
+	public static void main（String[] arg）
+	//创建Person对象
+	//类名 对象名（变量） =new 类名（）
+	Person p=new Person（）；
+｝
+
+
+对象：
+某一类下，特定的事物    
+
+性别 年龄 姓名 身高  …… 类
+男   20   Jack 170   …… 对象
+
+在程序中
+类是同过class 关键字是定义出来的

@@ -1,0 +1,42 @@
+查函数：malloc（）；free（）；open（）；write（）；read（）；close（）
+ 参数，返回值，功能，在什么头文件使用？
+
+疯狂java讲义，java编程思想，深入理解jum
+计算机网络 自上而下
+TCP\IP讲义
+剑指offer
+
+
+
+malloc:<stdlib.h>申请一段内存 int *p ； p=（int*）malloc（10）；
+free:<stdlib.h>释放malloc（或calloc，realloc）函数给指针变量分配的内存空间 使用后要使其重新指向NULL。
+fopen:<stdio.h> 返回文件指针或NULL。FILE*fp；fp=fopen("文件名"，"const char *mode") ；
+       mode有以下形态： r 以只读方式打开文件，该文件必须存在。
+       r+ 以可读写方式打开文件，该文件必须存在。
+       rb+ 读写打开一个二进制文件，允许读写数据，文件必须存在。
+       w 打开只写文件，若文件存在则文件长度清为0，即该文件内容会消失。若文件不存在则建立该文件。
+       w+ 打开可读写文件，若文件存在则文件长度清为零，即该文件内容会消失。若文件不存在则建立该文件。
+       a 以附加的方式打开只写文件。若文件不存在，则会建立该文件，如果文件存在，写入的数据会被加到文件尾，即文件原先的内容会被保留。（EOF符保留）
+       a+ 以附加方式打开可读写的文件。若文件不存在，则会建立该文件，如果文件存在,写入的数据会被加到文件尾后，即文件原先的内容会被保留。 （原来的EOF符不保留）
+       wb 只写打开或新建一个二进制文件；只允许写数据。
+       wb+ 读写打开或建立一个二进制文件，允许读和写。
+       ab+ 读写打开一个二进制文件，允许读或在文件末追加数据。 
+fclose:<stdio.h>释放文件指针及相关缓存区 ，返回0或-1。
+fwrite:<stdio.h>将数据写到已打开文件中，size_t fwrite(const void* buffer, size_t size, size_t count, FILE* stream);
+       注意：这个函数以二进制形式对文件进行操作，不局限于文本文件
+       返回值：返回实际写入的数据块数目
+      （1）buffer：是一个指针，对fwrite来说，是要获取数据的地址；
+      （2）size：要写入内容的单字节数；
+      （3）count:要进行写入size字节的数据项的个数；   
+      （4）stream:目标文件指针；
+      （5）返回实际写入的数据项个数count。
+fread:<stdio.h>size_t fread ( void *buffer, size_t size, size_t count, FILE *stream) ;
+      参 数
+      buffer 用于接收数据的内存地址
+      size 要读的每个数据项的字节数，单位是字节
+      count 要读count个数据项，每个数据项size个字节.
+      stream 输入流
+      返回值 实际读取的元素个数。如果返回值与count不相同，则可能文件结尾或发生错误。从ferror和feof获取错误信息或检测是否到达文件结尾。　
+
+
+
